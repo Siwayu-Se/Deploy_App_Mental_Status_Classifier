@@ -63,7 +63,7 @@ st.markdown(
     """
     <style>
         div.stButton > button {
-            background-color: #66FFCC;
+            background-color: #66CCCC;
             color: black;
             border-radius: 10px;
             font-size: 18px;
@@ -71,7 +71,7 @@ st.markdown(
             padding: 10px 20px;
         }
         div.stButton > button:hover {
-            background-color: #66CCCC;  /* เปลี่ยนสีเมื่อ Hover */
+            background-color: #3399CC;  /* เปลี่ยนสีเมื่อ Hover */
             color: white;
         }
     </style>
