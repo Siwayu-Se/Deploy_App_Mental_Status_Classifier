@@ -88,7 +88,7 @@ if st.button("Predict"):
         prediction = model_svc.predict(input_vector)[0]
 
         # กำหนดสีพื้นหลังตามผลลัพธ์
-        bg_color = "#33FFFF" if prediction == "Normal" else "#DC3545"
+        bg_color = "#33CCCC" if prediction == "Normal" else "#DC3545"
 
         # แสดงผลลัพธ์แบบโดดเด่น
         st.markdown(
