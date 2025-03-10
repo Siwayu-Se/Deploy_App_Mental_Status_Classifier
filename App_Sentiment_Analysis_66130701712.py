@@ -71,7 +71,7 @@ st.markdown(
             padding: 10px 20px;
         }
         div.stButton > button:hover {
-            background-color: #33CCCC;  /* เปลี่ยนสีเมื่อ Hover */
+            background-color: #6699FF;  /* เปลี่ยนสีเมื่อ Hover */
             color: white;
         }
     </style>
