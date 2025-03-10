@@ -27,7 +27,7 @@ tfidf = joblib.load(vectorizer_path)
 
 # กำหนด URL หรือเส้นทางของภาพพื้นหลัง
 background_image_url = "https://images.pexels.com/photos/3389539/pexels-photo-3389539.jpeg?auto=compress&cs=tinysrgb&w=600"
-text_color = "#3333FF"  # สีที่ต้องการ
+text_color = "#FFFFFF"  # สีที่ต้องการ
 
 # ใส่ CSS สำหรับพื้นหลังและสีตัวอักษร
 st.markdown(
