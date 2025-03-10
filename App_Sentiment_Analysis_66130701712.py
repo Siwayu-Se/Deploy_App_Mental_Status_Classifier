@@ -58,6 +58,27 @@ st.title("Mental Status Classification")
 
 user_input = st.text_area("Enter a statement:")
 
+# CSS สำหรับเปลี่ยนสีปุ่ม Predict
+st.markdown(
+    """
+    <style>
+        div.stButton > button {
+            background-color: #66FFFF;
+            color: black;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+        div.stButton > button:hover {
+            background-color: #33CCCC;  /* เปลี่ยนสีเมื่อ Hover */
+            color: white;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # ปุ่มพยากรณ์
 if st.button("Predict"):
     if user_input:
