@@ -65,12 +65,15 @@ if st.button("Predict"):
         input_vector = tfidf.transform([user_input])
         # ทำนายผล
         prediction = model_svc.predict(input_vector)[0]
-        
+
+        # กำหนดสีพื้นหลังตามผลลัพธ์
+        bg_color = "#007BFF" if prediction == "Normal" else "#DC3545"
+
         # แสดงผลลัพธ์แบบโดดเด่น
         st.markdown(
             f"""
             <div style="
-                background-color:#28a745;
+                background-color:{bg_color};
                 padding: 15px;
                 border-radius: 10px;
                 text-align: center;
