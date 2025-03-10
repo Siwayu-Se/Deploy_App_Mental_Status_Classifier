@@ -58,12 +58,30 @@ st.title("Mental Status Classification")
 
 user_input = st.text_area("Enter a statement:")
 
+# ปุ่มพยากรณ์
 if st.button("Predict"):
     if user_input:
         # แปลงข้อความเป็นเวกเตอร์
         input_vector = tfidf.transform([user_input])
         # ทำนายผล
         prediction = model_svc.predict(input_vector)[0]
-        st.write(f"Predicted Status: **{prediction}**")
+        
+        # แสดงผลลัพธ์แบบโดดเด่น
+        st.markdown(
+            f"""
+            <div style="
+                background-color:#28a745;
+                padding: 15px;
+                border-radius: 10px;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+                ">
+                Predicted Status: {prediction}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
     else:
         st.warning("Please enter a statement.")
