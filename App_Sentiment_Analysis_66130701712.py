@@ -26,7 +26,7 @@ model_svc = joblib.load(model_path)
 tfidf = joblib.load(vectorizer_path)
 
 # กำหนด URL หรือเส้นทางของภาพพื้นหลัง
-background_image_url = "https://images.pexels.com/photos/3389539/pexels-photo-3389539.jpeg?auto=compress&cs=tinysrgb&w=600"
+background_image_url = "https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 text_color = "#FFFFFF"  # สีตัวอักษร
 
 # ใส่ CSS สำหรับพื้นหลังและสีตัวอักษร
