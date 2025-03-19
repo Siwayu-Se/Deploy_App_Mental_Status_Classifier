@@ -48,9 +48,10 @@ st.markdown(
             border-radius: 5px;
             margin-top: 10px;
         }}
-        textarea {{
-            font-size: 20px !important;  /* ปรับขนาดตัวอักษรของ text_area */
-        }}
+        /* ปรับขนาดตัวอักษรของ text_area */
+        textarea {
+            font-size: 20px !important;
+        }
     </style>
     """,
     unsafe_allow_html=True
@@ -58,6 +59,9 @@ st.markdown(
 
 # ส่วนของ Streamlit
 st.title("Mental Status Classification")
+
+# กล่องป้อนข้อความ (ไม่มีการเพิ่มความสูง)
+user_input = st.text_area("Enter a statement:")
 
 # CSS สำหรับเปลี่ยนสีปุ่ม Predict
 st.markdown(
