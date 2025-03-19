@@ -27,7 +27,7 @@ tfidf = joblib.load(vectorizer_path)
 
 # กำหนด URL หรือเส้นทางของภาพพื้นหลัง
 background_image_url = "https://images.pexels.com/photos/3389539/pexels-photo-3389539.jpeg?auto=compress&cs=tinysrgb&w=600"
-text_color = "#FFFFFF"  # สีที่ต้องการ
+text_color = "#FFFFFF"  # สีตัวอักษร
 
 # ใส่ CSS สำหรับพื้นหลังและสีตัวอักษร
 st.markdown(
@@ -48,6 +48,9 @@ st.markdown(
             border-radius: 5px;
             margin-top: 10px;
         }}
+        textarea {{
+            font-size: 20px !important;  /* ปรับขนาดตัวอักษรของ text_area */
+        }}
     </style>
     """,
     unsafe_allow_html=True
@@ -56,7 +59,8 @@ st.markdown(
 # ส่วนของ Streamlit
 st.title("Mental Status Classification")
 
-user_input = st.text_area("Enter a statement:")
+# กล่องป้อนข้อความ
+user_input = st.text_area("Enter a statement:", height=150)  # ปรับให้ช่องสูงขึ้นเล็กน้อย
 
 # CSS สำหรับเปลี่ยนสีปุ่ม Predict
 st.markdown(
