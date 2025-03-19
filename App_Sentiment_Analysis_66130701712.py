@@ -50,7 +50,7 @@ st.markdown(
         }}
         /* ปรับขนาดตัวอักษรของ text_area */
         textarea {{
-            font-size: 20px !important;
+            font-size: 30px !important;
         }}
     </style>
     """,
