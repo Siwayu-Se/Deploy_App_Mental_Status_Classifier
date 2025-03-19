@@ -59,9 +59,6 @@ st.markdown(
 # ส่วนของ Streamlit
 st.title("Mental Status Classification")
 
-# กล่องป้อนข้อความ
-user_input = st.text_area("Enter a statement:", height=150)  # ปรับให้ช่องสูงขึ้นเล็กน้อย
-
 # CSS สำหรับเปลี่ยนสีปุ่ม Predict
 st.markdown(
     """
