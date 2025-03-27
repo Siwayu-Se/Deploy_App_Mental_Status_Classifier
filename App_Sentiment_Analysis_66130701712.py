@@ -148,11 +148,32 @@ if uploaded_file is not None:
         output_filename = "predicted_results.csv"
         df.to_csv(output_filename, index=False)
 
-        # สร้างลิงก์ให้ดาวน์โหลดไฟล์ที่ทำนายแล้ว
-        with open(output_filename, "rb") as file:
-            st.download_button(
-                label="Download Predicted CSV",
-                data=file,
-                file_name=output_filename,
-                mime="text/csv"
-            )
+# CSS สำหรับเปลี่ยนสีปุ่ม Download
+st.markdown(
+    """
+    <style>
+        div.stDownloadButton > button {
+            background-color: #66CCCC;
+            color: black;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+        div.stDownloadButton > button:hover {
+            background-color: #3399CC;
+            color: white;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# ปุ่มดาวน์โหลดไฟล์ที่ทำนายแล้ว
+with open(output_filename, "rb") as file:
+    st.download_button(
+        label="Download Predicted CSV",
+        data=file,
+        file_name=output_filename,
+        mime="text/csv"
+    )
